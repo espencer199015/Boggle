@@ -1,0 +1,98 @@
+$orange: #F57912;
+$yellow-orange: #FFCA08;
+$blue: #398BD4;
+$light-blue: #ACCEEC;
+#game {
+    min-height: 600px;
+    width: 350px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    background-color: $orange;
+    padding-bottom: 20px;
+    section {
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header {
+        width: auto;
+        margin: 10px auto;
+        text-align:center;
+        img {
+            max-width:200px;
+        }
+    }
+    #dice-grid {
+        border: 5px solid $yellow-orange;
+        width: 280px;
+        height: 275px;
+        margin: 0 auto;
+        background-color: $blue;
+        .dice {
+            text-align: center;
+            button {
+                height: 46px;
+                width: 45px;
+                margin: 3px;
+                border-radius: 8px;
+                background-color: #fff;
+                box-shadow: -2px 2px 2px #000;
+                outline: none;
+                border: none;
+                font-weight: 800;
+                &:last-child {
+                    //margin-right:0;
+                }
+            }
+            .selected {
+                background-color: $light-blue;
+            }
+        }
+        .dice:first-child {
+            margin-top: 6px;
+        }
+    }
+    #word-info {
+        margin-top: 20px;
+        * {display: inline;}
+        #current-word {
+        }
+        button {
+            float: right;
+        }
+    }
+    $table-border: 3px solid $yellow-orange;
+    #score-table {
+        width: 50%;
+        outline: $table-border;
+        margin-left: 35px;
+        margin-top: 20px;
+        border-spacing: 0;
+        tr {
+            th {
+                text-align: left;
+            }
+            th,td {
+                padding: 2px;
+                margin:0;
+                border-bottom: $table-border;
+                background-color: #fff;
+            }
+            th:first-child,
+            td:first-child {
+                width: 70%;
+            }
+            th:last-child,
+            td:last-child {
+                width: 30%;
+                border-left: $table-border;
+            }
+            &:last-child {
+                tr,td {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+//test
